@@ -18,5 +18,3 @@ def results(request):
     context = dict(papers=articles)
     return render(request, 'bird_results.html', context)
 
-
-def results(request):
