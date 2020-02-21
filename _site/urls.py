@@ -18,8 +18,17 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    path('', include('petalmain.urls')),
+
+    # Home Page
+    path('', include('_main.urls')),
+
+    # Admin
     path('admin/',       admin.site.urls),
+
+    # User Management
+    path('accounts/', include('django.contrib.auth.urls')),
+
+    # Petal
     path('bird/',   include('bird.urls')),
     path('bird-legacy/', include('bird-legacy.urls')),
     path('biomole/',     include('biomole.urls')),

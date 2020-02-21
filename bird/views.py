@@ -17,3 +17,6 @@ def results(request):
     # context = dict(query=result, papers=[dict(url='URL', relevancy=0.0, title='An example', abstract='Lorem ipsum imet ')])
     context = dict(papers=articles)
     return render(request, 'bird_results.html', context)
+
+
+def results(request):

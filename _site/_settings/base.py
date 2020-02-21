@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'rest_framework',
 
     # Petal
-    'petalmain.apps.PetalhomeConfig',
+    '_main.apps.PetalhomeConfig',
     'petalusers.apps.PetalusersConfig',
     'bird.apps.BirdConfig',
 

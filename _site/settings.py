@@ -32,7 +32,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     # Petal
-    'petalmain.apps.PetalConfig',
+    '_main.apps.PetalConfig',
     'bird.apps.BirdConfig',
     'bird-legacy.apps.BirdConfig',
     'biomole.apps.BiomoleConfig',
