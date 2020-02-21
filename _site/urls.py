@@ -18,7 +18,7 @@ from django.urls import path, include
 
 
 urlpatterns = [
-    path('', include('petalhome.urls')),
+    path('', include('petalmain.urls')),
     path('admin/',       admin.site.urls),
     path('bird/',   include('bird.urls')),
     path('bird-legacy/', include('bird-legacy.urls')),

@@ -9,11 +9,11 @@ services:
     build: .
 
     # start up the local server
-    command: python /petal-0.1.0.a.1/manage.py runserver 0.0.0.0:8000
+    command: python /petal/manage.py runserver 0.0.0.0:8000
 
     #syncs the Docker filesystem with our local computer’s filesystem
     volumes:
-      - .:/petal-0.1.0.a.1
+      - .:/petal
 
     # specify the ports to expose within Docker
     ports:
