@@ -25,3 +25,12 @@ services:
           - db
   db:
     image: postgres:12
+
+#    # a dedicated volume for our local database data within the container
+#    volumes:
+#      - postgres_data:/var/lib/postgresql/data/
+#
+#
+#    # a dedicated volume for our local database data outside the container
+#  volumes:
+#    postgres_data:
