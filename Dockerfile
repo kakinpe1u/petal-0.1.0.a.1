@@ -10,11 +10,11 @@ WORKDIR /petal
 
 # Install dependencies
 COPY Pipfile Pipfile.lock /petal/
-RUN pip install pipenv
-RUN pipenv install --system
+RUN pip install pipenv && pipenv install --system
 #
 # mark a file as 'executable' since this is a linux container on a windows host
-RUN ["chmod", "+x", "executable.sh"]
+#RUN ["chmod", "+x", "executable.sh"]
+#chmod +rwx manage.py
 
 # Copy project
 COPY . /petal/

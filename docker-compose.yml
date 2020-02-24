@@ -18,3 +18,10 @@ services:
     # specify the ports to expose within Docker
     ports:
       - 8000:8000
+
+    # make our website depend on the db to run,
+    # consequently db will be started up before web
+    depends_on:
+          - db
+  db:
+    image: postgres:12
