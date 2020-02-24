@@ -12,6 +12,9 @@ WORKDIR /petal
 COPY Pipfile Pipfile.lock /petal/
 RUN pip install pipenv
 RUN pipenv install --system
+#
+# mark a file as 'executable' since this is a linux container on a windows host
+RUN ["chmod", "+x", "executable.sh"]
 
 # Copy project
 COPY . /petal/
