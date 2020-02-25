@@ -25,6 +25,9 @@ services:
           - db
   db:
     image: postgres:12
+    environment:
+       POSTGRES_PASSWORD: "testing"
+#      POSTGRES_HOST_AUTH_METHOD: "trust"
 
 #    # a dedicated volume for our local database data within the container
 #    volumes:

@@ -1,7 +1,6 @@
 from django.urls import path
-
-from . import views
+from _main.views import PetalHomeView
 
 urlpatterns = [
-    path('', views.index, name='index'),
+    path('', PetalHomeView.as_view(), name='petalhome'),
 ]

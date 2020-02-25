@@ -19,11 +19,11 @@ from django.urls import path, include
 
 urlpatterns = [
 
-    # Home Page
-    path('', include('_main.urls')),
-
     # Admin
     path('admin/',       admin.site.urls),
+
+    # Home Page
+    path('', include('_main.urls')),
 
     # User Management
     path('accounts/', include('django.contrib.auth.urls')),
