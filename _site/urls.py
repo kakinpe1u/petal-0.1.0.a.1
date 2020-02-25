@@ -22,11 +22,11 @@ urlpatterns = [
     # Admin
     path('admin/',       admin.site.urls),
 
-    # Home Page
-    path('', include('_main.urls')),
-
     # User Management
     path('accounts/', include('django.contrib.auth.urls')),
+
+    # Home Page
+    path('', include('_main.urls')),
 
     # Petal
     path('bird/',   include('bird.urls')),

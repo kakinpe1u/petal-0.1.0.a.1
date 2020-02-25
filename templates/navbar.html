@@ -27,6 +27,14 @@
                <p>PeTaL<br><span>Periodic Table of Life</span></p>
             </a>
             <ul>
+            <div style="text-align: center;">
+                {% if user.is_authenticated %}
+                    Account: {{ user.email }}
+                {% else %}
+                    <p>You are not logged in</p>
+                <a href="{% url 'login' %}">Log In</a>
+                {% endif %}
+            </div>
 	       <li><a href="/bird">BIRD</a></li>
 	       <li><a href="/bird-legacy">BIRD Legacy</a></li>
 	       <li><a href="/biomole">BioMole</a></li>
