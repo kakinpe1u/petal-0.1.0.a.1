@@ -13,6 +13,8 @@ sphinx = "*"
 neomodel = "*"
 neo4j = "*"
 psycopg2 = "*"
+unidecode = "*"
+stripe = "*"
 
 [requires]
 python_version = "3.7"

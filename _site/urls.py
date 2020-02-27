@@ -29,7 +29,7 @@ urlpatterns = [
     path('', include('_main.urls')),
 
     # Petal
-    path('bird/',   include('bird.urls')),
+    path('bird/',        include('bird.urls')),
     path('bird-legacy/', include('bird-legacy.urls')),
     path('biomole/',     include('biomole.urls')),
     path('map/',         include('map-beta.urls')),

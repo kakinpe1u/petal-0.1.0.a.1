@@ -13,27 +13,27 @@ class Species(StructuredNode, NodeSerializer):
     # CRITICAL - properties have to be identical to the corresponding properties in neo4j
 
     Order = StringProperty()
-    organism_order = AliasProperty(to = "Order")
+    # organism_order = AliasProperty(to = "Order")
 
     CatalogSource = StringProperty()
-    catalogue_source = AliasProperty(to = "CatalogSource")
+    # catalogue_source = AliasProperty(to = "CatalogSource")
 
     Phylum = StringProperty()
-    organism_phylum = AliasProperty(to = "Phylum")
+    # organism_phylum = AliasProperty(to = "Phylum")
 
     Genus = StringProperty()
-    organism_genus = AliasProperty(to = "Genus")
+    # organism_genus = AliasProperty(to = "Genus")
 
     Family = StringProperty()
-    organism_family = AliasProperty(to = "Family")
+    # organism_family = AliasProperty(to = "Family")
 
     Class = StringProperty()
-    organism_class = AliasProperty(to = "Class")
+    # organism_class = AliasProperty(to = "Class")
 
     Name = StringProperty(required = True)
-    organism_name = AliasProperty(to = "Name")
+    # organism_name = AliasProperty(to = "Name")
 
-    node_id = StringProperty(index = True)
+    # node_id = StringProperty(index = True)
 
     # Relationships
     species = Relationship(".species.Species", None)
@@ -43,13 +43,14 @@ class Species(StructuredNode, NodeSerializer):
     def serialize(self):
         return {
             "node_properties": {
-                "species_name": self.species_name,
-                "phylum": self.phylum,
-                "clazz": self.clazz,
-                "order": self.order,
-                "family": self.family,
-                "genus": self.genus,
-                "node_id": self.node_id,
+                "order": self.Order,
+                "catalogue_source": self.CatalogSource,
+                "phylum": self.Phylum,
+                "genus": self.Genus,
+                "family": self.Family,
+                "class": self.Class,
+                "name": self.Name,
+                # "node_id": self.node_id,
             },
         }
 

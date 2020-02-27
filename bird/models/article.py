@@ -23,15 +23,11 @@ class Article(StructuredNode, NodeSerializer):
     title = StringProperty()
     content = StringProperty()
     uuid = StringProperty()
-    node_id = StringProperty(index = True)
+    # node_id = StringProperty(index = True)
 
     # Relationships
     article = Relationship(".article.Article", None)
     species = RelationshipTo(".species.Species", "MENTIONS_IN_ARTICLE")
-
-class WikipediaArticle(Article):
-    __label__ = "WikipediaArticle"
-    pass
 
     @property
     def serialize(self):
@@ -40,10 +36,11 @@ class WikipediaArticle(Article):
                 "summary": self.summary,
                 "images": self.images,
                 "references": self.references,
+                "links": self.links,
                 "title": self.title,
                 "content": self.content,
                 "uuid": self.uuid,
-                'node_id': self.node_id,
+                # 'node_id': self.node_id,
             },
         }
 
@@ -55,3 +52,7 @@ class WikipediaArticle(Article):
                 "nodes_related": self.serialize_relationships(self.species.all()),
             },
         ]
+
+class WikipediaArticle(Article):
+    __label__ = "WikipediaArticle"
+    pass
