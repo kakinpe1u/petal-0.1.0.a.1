@@ -23,26 +23,26 @@ def birdresults(request):
     context = dict(papers=articles)
     return render(request, 'bird_results.html', context)
 
-
-class GetSpecies(APIView):
-    def get(self, request):
-        species = retrieve_organism_names()
-        data = {
-            'response': {
-                'status': '200',
-                'data': species,
-            },
-        }
-        return Response(data)
-
-
-class GetArticleTitles(APIView):
-    def get(self, request):
-        titles = retrieve_titles()
-        data = {
-            'response': {
-                'status': '200',
-                'data': titles,
-            },
-        }
-        return Response(data)
+#
+# class GetSpecies(APIView):
+#     def get(self, request):
+#         species = retrieve_organism_names()
+#         data = {
+#             'response': {
+#                 'status': '200',
+#                 'data': species,
+#             },
+#         }
+#         return Response(data)
+#
+#
+# class GetArticleTitles(APIView):
+#     def get(self, request):
+#         titles = retrieve_titles()
+#         data = {
+#             'response': {
+#                 'status': '200',
+#                 'data': titles,
+#             },
+#         }
+#         return Response(data)
